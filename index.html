@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <style>
     body {
@@ -178,8 +179,8 @@
             const touchEndX = event.touches[0].clientX;
             const touchEndY = event.touches[0].clientY;
 
-            const deltaX = touchEndX - touchEndY;
-            const deltaY = touchEndY - touchEndX;
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
 
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 if (deltaX > 0 && direction !== "left") {
